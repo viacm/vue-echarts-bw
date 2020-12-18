@@ -20,7 +20,7 @@
       "
       >设备故障诊断知识服务</span
     >
-    <div class="search-input">
+    <div class="search-input-diagnosis-4">
       <input
         type="text"
         placeholder="2050热轧卷取运输链-H104的交流同步电动机发生堵转"
@@ -31,8 +31,8 @@
         @keydown.up.prevent="selectUp()"
       />
       <!-- 这是一个小叉叉，点击它可清除输入框内容 -->
-      <span class="search-reset" @click="clearInput()">&times;</span>
-      <button class="search-btn" @click="search()">故障诊断</button>
+      <span class="search-reset-diagnosis-4" @click="clearInput()">&times;</span>
+      <button class="search-btn-diagnosis-4" @click="search()">故障诊断</button>
     </div>
     <ul class="home-kind">
       <li v-for="(item, index) in kind" :key="index">
@@ -324,7 +324,7 @@ a {
 //   font-weight: 900;
 //   position: absolute;
 // }
-.search-input {
+.search-input-diagnosis-4 {
   height: 45px;
   width: 600px;
   margin: 0 auto;
@@ -344,7 +344,7 @@ a {
     overflow: hidden;
   }
 }
-.search-btn {
+.search-btn-diagnosis-4 {
   position: relative;
   top: 40px;
   height: 45px;
@@ -357,7 +357,7 @@ a {
   float: left;
   cursor: pointer;
 }
-.search-select {
+.search-select-diagnosis-4 {
   li {
     border: 1px solid #d4d4d4;
     border-top: none;
@@ -375,7 +375,7 @@ input {
     display: none;
   }
 }
-.search-reset {
+.search-reset-diagnosis-4 {
   width: 21px;
   height: 21px;
   position: absolute;

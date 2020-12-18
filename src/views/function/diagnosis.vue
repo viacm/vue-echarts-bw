@@ -4,19 +4,21 @@
     <!--  getindex是自定义事件 -->
     <div class="background">
       <img src="../../../static/img/head-view/second-bg.jpg" width="100%" height="100%">
-      <span style="position: absolute; top: 20%; left:35%; color:white; font-size: 50px;text-align: center;">设备故障诊断知识服务</span>
     </div>
-    <div class="search-input">
+    <div class="title-diagnosis">
+      <span>设备故障诊断知识服务</span>
+    </div>
+    <div class="search-input-diagnosis">
       <!-- $event是实参，表示event对象 -->
       <!--
           输入搜索内容即时搜索，所以有一个keyup事件。
           按回车键有一个进入搜索内容页面，所以有一个keydown.enter事件
           按上下键可以选择列表条目
       -->
-      <input type="text" placeholder="2050热轧卷取运输链-H104交流同步电动机发生了堵转" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
+      <input type="text-diagnosis" placeholder="2050热轧卷取运输链-H104交流同步电动机发生了堵转" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
       <!-- 这是一个小叉叉，点击它可清除输入框内容 -->
-      <span class="search-reset" @click="clearInput()">&times;</span>
-      <button class="search-btn" @click="search()"> <router-link :to="'../conclusion/fault_diagnosis'">故障诊断</router-link> </button>
+      <span class="search-reset-diagnosis" @click="clearInput()">&times;</span>
+      <button class="search-btn-diagnosis" @click="search()"> <router-link :to="'../conclusion/fault_diagnosis'">故障诊断</router-link> </button>
 <!--      /conclusion/fault_diagnosis  /home/index-1-->
 
 
@@ -87,6 +89,18 @@
 </script>
 
 <style type="text/css">
+  .title-diagnosis{
+    position: relative;
+    /*bottom: 550px;*/
+    /*left: 400px;*/
+    /*margin: auto;*/
+    top: 180px;
+    margin: 0px auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    color:white;
+    font-size: 60px;
+  }
   .background{
     margin: 0px;
     width:100%;
@@ -102,43 +116,41 @@
   .router-link-active {
     text-decoration: none;
   }
-  .search-input {
-    height: 45px;
-    width: 600px;
+  .search-input-diagnosis {
+    height: 60px;
+    width: 820px;
     margin: 0 auto;
     margin-top: 10px;
     position: relative;
   }
 
-  .search-input input {
+  .search-input-diagnosis input {
     position: relative;
     top: 300px;
     border: 1px solid #e4e4e4;
     box-sizing: border-box;
-    width: 500px;
-    height: 45px;
-    font-size: 18px;
+    width: 700px;
+    height: 60px;
+    font-size: 22px;
     float: left;
     padding-left: 10px;
     padding-right: 10px;
     overflow: hidden;
   }
-  .search-btn {
+  .search-btn-diagnosis {
     position: relative;
     top: 300px;
-    height: 45px;
-    width: 100px;
+    height: 60px;
+    width: 120px;
     border: 1px solid #a7adaa;
     background-color: #eaf1ec;
     color: #6a6565;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     float: left;
+    cursor: pointer;
   }
-  .search-btn {
-    cursor: pointer
-  }
-  .search-select li {
+  .search-select-diagnosis li {
 
     border: 1px solid #d4d4d4;
   ;
@@ -152,18 +164,17 @@
     display: none
   }
 
-  .search-reset {
-
-    width: 21px;
-    height: 21px;
+  .search-reset-diagnosis {
+    width: 30px;
+    height: 30px;
     position: absolute;
     display: block;
-    line-height: 21px;
+    line-height: 30px;
     text-align: center;
     cursor: pointer;
-    font-size: 20px;
-    right: 110px;
-    top: 312px;
+    font-size: 30px;
+    right: 130px;
+    top: 315px;
   }
-  .search-select ul{margin:0;text-align: left; }
+  .search-select-diagnosis ul{margin:0;text-align: left; }
 </style>

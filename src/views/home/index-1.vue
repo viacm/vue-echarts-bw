@@ -1,98 +1,126 @@
 <template>
-  <div>
-<!--    <el-carousel trigger="click" height="20px" @change="loadAnimate">-->
-
-<!--    </el-carousel>-->
-    <div style="width:100%;height:35px;border:1px solid #000;color: #2c3e50;background: #2c3e50"> </div>
-    <span style="position: absolute; top: 5px; left:5px; color:white; font-size: 20px;text-align: center;">设备故障诊断知识服务</span>
-
-    <ul class="home-kind">
-      <li v-for="(item,index) in kind" :key="index">
-        <h3>{{ item.title }}<div></div></h3>
-        <p>{{ item.info }}</p>
-      </li>
+  <div class="scenario">
+    <div class="background">
+      <img src="../../../static/img/head-view/index-bg.jpg" width="100%" height="100%">
+      <span style="position: absolute; bottom: 550px; left: 400px; color:white; font-size: 60px">工业互联网智能运维知识服务系统</span>
+    </div>
+    <ul class="scenarios">
+      <transition-group enter-active-class="animated zoomInLeft" leave-active-class="animated zoomOutRight">
+        <li v-for="(item,index) in scenarios" :key="index">
+          <router-link :to="'/product/'+item.id">
+            <img :src="'../../../static/img/product/'+ item.img" width="400px" height="260px" />
+          </router-link>
+          <div class="inner-text">
+            <h4>{{ item.title }}</h4>
+          </div>
+        </li>
+      </transition-group>
     </ul>
   </div>
 </template>
 <script>
-  import { home } from '../../http/home';
-
   export default {
-    name: "Home",
+    name: 'scenario',
     data(){
       return {
-        kind:[
+        scenarios: [
           {
-            title: '故障知识',
-
+            id: 1,
+            kind: 1,
+            img: 'work01.jpg',
+            title: '大型起重机'
           },
           {
-            title: '历史故障',
-
-          },
-          {
-            title: '标准文件',
-
+            id: 2,
+            kind: 2,
+            img: 'work02.jpg',
+            title: '钢铁设备产线'
           }
         ],
+        copy_products: []
       }
     },
+    mounted(){
+      this.copy_scenarios = JSON.parse(JSON.stringify(this.scenarios));
+      this.$emit('headFix', ['absolute',true]);
+      window.addEventListener('scroll', this.handleScroll);
+    },
+
 
   }
 </script>
-<style lang="scss" scoped>
-  .home-kind {
-    box-sizing: border-box;
-    background-color: #EBEEF5;
-    padding: 0 5%;
-    display: flex;
-    li {
-      padding: 1%;
-      text-align: center;
-      position: relative ;
-      box-sizing: border-box;
-      width: 25%;
-      h3{
-        display: inline-block;
-        div {
-          margin-top: 1%;
-          height: 2px;
-          width: 40px;
-          background-color: #0984E3;
-        }
-      }
-      p {
-        margin-top: 1.5%;
-        font-size: 14px;
-        color: gray;
-      }
-      h3>div {
-        transition: width .5s;
-      }
-      &:hover {
-        background-color: #ffffff;
-        transition: background-color .5s;
-        h3>div{
-          width: 100%;
-        }
-      }
-      &:not(:first-child)::before {
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 80%;
-        left: 0;
-        background-color: #D6D6D6;
-      }
 
+<style lang="scss" scoped>
+
+  .scenario {
+    .background{
+      margin: 0px;
+      width:100%;
+      height:100%;  /**宽高100%是为了图片铺满屏幕 */
+      z-index:-1;
+      position: absolute;
+    }
+    .scenarios>span{
+      /*margin: 35vh auto;*/
+      position: absolute;
+      top:300px;
+      left:300px;
+      width: 70%;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      row-gap: 3%;
+      li {
+        position: relative;
+        overflow: hidden;
+        img {
+          transition: all .5s ease-out;
+        }
+        &:hover img {
+          opacity: 0.8;
+        }
+        &:hover .inner-text{
+          visibility: visible;
+          top: 78.5%;
+        }
+        /* 内部文字 */
+        .inner-text {
+          position: absolute;
+          left: 50%;
+          right: 10%;
+          top: 100%;
+          transform: translateX(-50%);
+          background: transparent;
+          height: 20%;
+          width: 400px;
+          background-color: rgba(0,0,0,.5);
+          color: #ffffff;
+          visibility: hidden;
+          transition: all .5s ease-out;
+          h4 {
+            margin-top: 5%;
+          }
+        }
+
+      }
     }
   }
+  // 动画
+  @keyframes self-zoomIn {
+    from {
+      border: 0px solid transparent;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
 
-  // 动画类
-  .bounceInDown {
-    animation: bounceInDown 1s linear;
-  }
-  .fadeInUp {
-    animation: fadeInUp 1s linear;
+    50% {
+      border: 3px solid #ffffff;
+    }
+
+    80% {
+      border: 3px solid #ffffff;
+    }
+
+    100% {
+      border: 3px solid rgb(255, 255, 255);
+    }
   }
 </style>

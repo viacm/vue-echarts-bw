@@ -2,8 +2,11 @@
   <div class="function">
     <div class="background">
       <img src="../../../static/img/head-view/index-bg.jpg" width="100%" height="100%">
-      <span style="position: absolute; bottom: 550px; left: 400px; color:white; font-size: 60px">工业互联网智能运维知识服务系统</span>
     </div>
+    <div class="title-function">
+      <span>工业互联网智能运维知识服务系统</span>
+    </div>
+
     <ul class="functions">
       <transition-group enter-active-class="animated zoomInLeft" leave-active-class="animated zoomOutRight">
         <li v-for="(item,index) in functions" :key="index">
@@ -53,6 +56,19 @@ export default {
 
 <style lang="scss" scoped>
 
+  .title-function{
+    position: relative;
+    /*bottom: 550px;*/
+    /*left: 400px;*/
+    /*margin: auto;*/
+    top: 180px;
+    margin: 0px auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    color:white;
+    font-size: 60px;
+
+  }
   .function {
     .background{
       margin: 0px;
@@ -63,10 +79,14 @@ export default {
     }
     .functions>span{
       /*margin: 35vh auto;*/
-      position: absolute;
-      top:300px;
-      left:300px;
-      width: 70%;
+      /*margin: 35vh auto;*/
+      /*position: absolute;*/
+      /*top:300px;*/
+      /*left:300px;*/
+      position: relative;
+      top: 300px;
+      margin: 0px auto;
+      width: 1200px;
       display: grid;
       grid-template-columns: repeat(2, 50%);
       row-gap: 3%;

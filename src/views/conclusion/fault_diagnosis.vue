@@ -3,11 +3,11 @@
 
     <div style="width:100%;height:35px;border:1px solid #000;color: #2c3e50;background: #2c3e50"> </div>
     <span style="position: absolute; top: 5px; left:5px; color:white; font-size: 20px;text-align: center;">设备故障诊断知识服务</span>
-    <div class="search-input">
-        <input type="text" placeholder="2050热轧卷取运输链-H104的交流同步电动机发生堵转" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
+    <div class="search-input-diagnosis-2">
+        <input type="text-diagnosis-2" placeholder="2050热轧卷取运输链-H104的交流同步电动机发生堵转" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
         <!-- 这是一个小叉叉，点击它可清除输入框内容 -->
-        <span class="search-reset" @click="clearInput()">&times;</span>
-        <button class="search-btn" @click="search()"> 故障诊断 </button>
+        <span class="search-reset-diagnosis-2" @click="clearInput()">&times;</span>
+        <button class="search-btn-diagnosis-2" @click="search()"> 故障诊断 </button>
     </div>
     <ul class="home-kind">
         <li v-for="(item,index) in kind" :key="index">
@@ -119,7 +119,7 @@
     color: #6a6565;
     text-decoration: none;
   }
-  .search-input {
+  .search-input-diagnosis-2 {
     height: 45px;
     width: 600px;
     margin: 0 auto;
@@ -139,7 +139,7 @@
     overflow: hidden;
   }
   }
-  .search-btn {
+  .search-btn-diagnosis-2 {
     position: relative;
     top: 40px;
     height: 45px;
@@ -152,7 +152,7 @@
     float: left;
     cursor: pointer;
   }
-  .search-select {
+  .search-select-diagnosis-2 {
   li {
     border: 1px solid #d4d4d4;
     border-top: none;
@@ -170,7 +170,7 @@
      display: none;
    }
   }
-  .search-reset {
+  .search-reset-diagnosis-2 {
     width: 21px;
     height: 21px;
     position: absolute;

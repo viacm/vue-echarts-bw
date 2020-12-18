@@ -3,11 +3,11 @@
 
     <div style="width:100%;height:35px;border:1px solid #000;color: #2c3e50;background: #2c3e50"> </div>
     <span style="position: absolute; top: 5px; left:5px; color:white; font-size: 20px;text-align: center;">设备故障知识查询</span>
-    <div class="search-input">
-      <input type="text" placeholder="电缆/接线" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
+    <div class="search-input-2">
+      <input type="text-2" placeholder="电缆/接线" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
       <!-- 这是一个小叉叉，点击它可清除输入框内容 -->
-      <span class="search-reset" @click="clearInput()">&times;</span>
-      <button class="search-btn" @click="search()"> 查询 </button>
+      <span class="search-reset-2" @click="clearInput()">&times;</span>
+      <button class="search-btn-2" @click="search()"> 查询 </button>
     </div>
 
     <div class="mytext">
@@ -197,7 +197,7 @@
   .router-link-active {
     text-decoration: none;
   }
-  .search-input {
+  .search-input-2 {
     height: 45px;
     width: 600px;
     margin: 0 auto;
@@ -205,7 +205,7 @@
     position: relative;
   }
 
-  .search-input input {
+  .search-input-2 input {
     position: relative;
     top: 40px;
     border: 1px solid #e4e4e4;
@@ -218,7 +218,7 @@
     padding-right: 10px;
     overflow: hidden;
   }
-  .search-btn {
+  .search-btn-2 {
     position: relative;
     top: 40px;
     height: 45px;
@@ -230,7 +230,7 @@
     font-weight: bold;
     float: left;
   }
-  .search-btn {
+  .search-btn-2 {
     cursor: pointer
   }
   .search-select li {
@@ -246,7 +246,7 @@
     display: none
   }
 
-  .search-reset {
+  .search-reset-2 {
 
     width: 21px;
     height: 21px;

@@ -4,19 +4,21 @@
     <!--  getindex是自定义事件 -->
     <div class="background">
       <img src="../../../static/img/head-view/second-bg.jpg" width="100%" height="100%">
-      <span style="position: absolute; top: 20%; left:35%; color:white; font-size: 50px;text-align: center;">设备故障知识查询</span>
     </div>
-    <div class="search-input">
+    <div class="title-search">
+      <span>设备故障知识查询</span>
+    </div>
+    <div class="search-input-1">
       <!-- $event是实参，表示event对象 -->
       <!--
           输入搜索内容即时搜索，所以有一个keyup事件。
           按回车键有一个进入搜索内容页面，所以有一个keydown.enter事件
           按上下键可以选择列表条目
       -->
-      <input type="text" placeholder="交流鼠笼式异步电机" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
+      <input type="text-1" placeholder="交流鼠笼式异步电机" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
       <!-- 这是一个小叉叉，点击它可清除输入框内容 -->
-      <span class="search-reset" @click="clearInput()">&times;</span>
-      <button class="search-btn" @click="search()"><router-link :to="'../conclusion/search_knowledge'">查询</router-link></button>
+      <span class="search-reset-1" @click="clearInput()">&times;</span>
+      <button class="search-btn-1" @click="search()"><router-link :to="'../conclusion/search_knowledge'">查询</router-link></button>
     </div>
   </div>
 </template>
@@ -83,81 +85,92 @@
   }
 </script>
 
-<style type="text/css">
-  .background{
+<style lang="scss" scoped>
+  .title-search{
+    position: relative;
+    /*bottom: 550px;*/
+    /*left: 400px;*/
+    /*margin: auto;*/
+    top: 180px;
+    margin: 0px auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    color:white;
+    font-size: 60px;
+  }
+  .background {
     margin: 0px;
-    width:100%;
-    height:100%;  /**宽高100%是为了图片铺满屏幕 */
-    z-index:-1;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     position: absolute;
   }
   a {
     color: #6a6565;
     text-decoration: none;
   }
-  .search-input {
-    height: 45px;
-    width: 600px;
+  .search-input-1 {
+    height: 60px;
+    width: 820px;
     margin: 0 auto;
     margin-top: 10px;
     position: relative;
+    input {
+      position: relative;
+      top: 300px;
+      border: 1px solid #e4e4e4;
+      box-sizing: border-box;
+      width: 700px;
+      height: 60px;
+      font-size: 22px;
+      float: left;
+      padding-left: 10px;
+      padding-right: 10px;
+      overflow: hidden;
+    }
   }
-
-  .search-input input {
+  .search-btn-1 {
     position: relative;
     top: 300px;
-    border: 1px solid #e4e4e4;
-    box-sizing: border-box;
-    width: 500px;
-    height: 45px;
-    font-size: 18px;
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    overflow: hidden;
-  }
-  .search-btn {
-    position: relative;
-    top: 300px;
-    height: 45px;
-    width: 100px;
+    height: 60px;
+    width: 120px;
     border: 1px solid #a7adaa;
     background-color: #eaf1ec;
     color: #6a6565;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     float: left;
+    cursor: pointer;
   }
-  .search-btn {
-    cursor: pointer
+  /*.search-select-1 {*/
+  /*li {*/
+  /*  border: 1px solid #d4d4d4;*/
+  /*  border-top: none;*/
+  /*  border-bottom: none;*/
+  /*  background-color: #fff;*/
+  /*  width: 100%;*/
+  /*}*/
+  /*ul {*/
+  /*  margin: 0;*/
+  /*  text-align: left;*/
+  /*}*/
+  /*}*/
+  input {
+  &::-ms-clear {
+     display: none;
+   }
   }
-  .search-select li {
-
-    border: 1px solid #d4d4d4;
-  ;
-    border-top: none;
-    border-bottom: none;
-    background-color: #fff;
-    width: 100%
-  }
-
-  input::-ms-clear {
-    display: none
-  }
-
-  .search-reset {
-
-    width: 21px;
-    height: 21px;
+  .search-reset-1 {
+    width: 30px;
+    height: 30px;
     position: absolute;
     display: block;
-    line-height: 21px;
+    line-height: 30px;
     text-align: center;
     cursor: pointer;
-    font-size: 20px;
-    right: 110px;
-    top: 312px;
+    font-size: 30px;
+    right: 130px;
+    top: 315px;
   }
 
-  .search-select ul{margin:0;text-align: left; }
 </style>
