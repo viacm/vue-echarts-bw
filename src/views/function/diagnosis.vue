@@ -18,7 +18,7 @@
       <input type="text-diagnosis" placeholder="2050热轧卷取运输链-H104交流同步电动机发生了堵转" v-model="keyword" @keyup="get($event)" @keydown.enter="search()" @keydown.down="selectDown()" @keydown.up.prevent="selectUp()">
       <!-- 这是一个小叉叉，点击它可清除输入框内容 -->
       <span class="search-reset-diagnosis" @click="clearInput()">&times;</span>
-      <button class="search-btn-diagnosis" @click="search()"> <router-link :to="'../conclusion/fault_diagnosis'">故障诊断</router-link> </button>
+      <button class="search-btn-diagnosis" @click="search()"> <router-link :to="'../conclusion/1'">故障诊断</router-link> </button>
 <!--      /conclusion/fault_diagnosis  /home/index-1-->
 
 

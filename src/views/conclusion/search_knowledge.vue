@@ -13,7 +13,7 @@
     <div class="mytext">
       <span style="position: absolute; top: 216px; left:15%; color:black; font-size: 20px;text-align: center; background: white">设备运维知识图谱</span>
     </div>
-    <div class="svg_device">
+    <div class="svg_device-search-knowledge">
 <!--      <embed src="static/img/conclusion/设备.svg" width="100%" height="100%"-->
 <!--             type="image/svg"-->
 <!--             pluginspage="http://www.adobe.com/svg/viewer/install/" />-->
@@ -26,22 +26,22 @@
       <embed src="../../../static/img/conclusion/设备.svg" style="display:block ;width:800px;height: 500px;background: #ffffff;"/>
     </div>
 
-    <div class="device" >
+    <div class="device-search-knowledge" >
 
     </div>
-    <div class="device-title">
+    <div class="device-title-search-knowledge">
       <h2>交流鼠笼式异步电机</h2>
     </div>
 
-    <div class="area" >
-      <div class="area-title"><h3>通常发生故障的部位</h3></div>
+    <div class="area-search-knowledge" >
+      <div class="area-title-search-knowledge"><h3>通常发生故障的部位</h3></div>
       <ul>
         <li>1. <router-link :to="'../conclusion/parts_kg'">电缆/接线</router-link></li>
         <li>2. 定子</li>
       </ul>
     </div>
-    <div class="fault">
-      <div class="fault-title"><h3>该设备可能发生的故障</h3></div>
+    <div class="fault-search-knowledge">
+      <div class="fault-title-search-knowledge"><h3>该设备可能发生的故障</h3></div>
       <ul>
         <li>1. 辊马达故障</li>
         <li>2. 辊道电缆故障</li>
@@ -49,8 +49,8 @@
         <li>4. 油泵跳库</li>
       </ul>
     </div>
-    <div class="reason">
-      <div class="reason-title"><h3>产生故障可能的原因</h3></div>
+    <div class="reason-search-knowledge">
+      <div class="reason-title-search-knowledge"><h3>产生故障可能的原因</h3></div>
       <ul>
         <li>1. <router-link :to="'../conclusion/reason_kg'">零件螺杆</router-link></li>
         <li>2. 环境因素</li>
@@ -128,7 +128,7 @@
 </script>
 
 <style type="text/css">
-  .device{
+  .device-search-knowledge{
     position: absolute;
     top:242px;
     left: 70%;
@@ -136,7 +136,7 @@
     height:70px;
     background: black;
   }
-  .device-title{
+  .device-title-search-knowledge{
     position: absolute;
     top:256px;
     left: 72%;
@@ -145,7 +145,7 @@
     width:220px;
     height:70px;
   }
-  .area{
+  .area-search-knowledge{
     position: absolute;
     top:346px;
     left: 70%;
@@ -155,7 +155,7 @@
     height:90px;
     background: #ffffff;
   }
-  .fault{
+  .fault-search-knowledge{
     position: absolute;
     top:466px;
     left: 70%;
@@ -165,7 +165,7 @@
     height:130px;
     background: #ffffff;
   }
-  .reason{
+  .reason-search-knowledge{
     position: absolute;
     top:626px;
     left: 70%;
@@ -176,7 +176,7 @@
     background: #ffffff;
   }
 
-  .svg_device{
+  .svg_device-search-knowledge{
     position: relative;
     top:150px;
     margin: 0 15%;

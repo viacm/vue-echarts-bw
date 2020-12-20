@@ -76,11 +76,6 @@
         <td>
           <table
             class="historyfault-content"
-            border="0"
-            cellpadding="0"
-            cellspacing="0"
-            width="500"
-            height="500"
           >
             <tr>
               <td><h3>故障台账编号</h3></td>
@@ -307,23 +302,28 @@ a {
   color: #6a6565;
   text-decoration: none;
 }
-// .historyfault-all {
-//   width: 500px;
-//   height: 500px;
-//   margin: 0 auto;
-//   top: 290px;
-//   left: 70%;
-//   line-height: 2;
-//   text-align: center;
-//   background: #ffffff;
-// }
-// .historyfault-content {
-//   background: #ffffff;
-// }
-// .historyfault-content tr td {
-//   font-weight: 900;
-//   position: absolute;
-// }
+ .historyfault-all {
+   margin: 0 auto;
+
+   line-height: 2;
+   text-align: center;
+   background: #ffffff;
+ }
+ .historyfault-content {
+   border:0;
+   cellpadding:0;
+   cellspacing:0;
+   width:500px;
+   height:500px;
+   font-size: 20px;
+   font-weight: 900;
+   background: #ffffff;
+ }
+ .historyfault-content tr td {
+   font-weight: 400;
+   position: relative;
+   text-align: left;
+ }
 .search-input-diagnosis-4 {
   height: 45px;
   width: 600px;

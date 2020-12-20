@@ -62,24 +62,20 @@
         </div>
       </li>
     </ul>
-    <table class="historyfault-self-all" align="center">
+    <table class="historyfault-self-all">
       <tr>
         <td width="200"></td>
         <td>
           <embed
             src="../../../static\img\conclusion\台账编号.svg"
-            style="display: block; width: 500px; background: #ffffff"
+            style="display: block; width: 600px; background: #ffffff"
           />
         </td>
         <td width="100"></td>
         <td>
           <table
             class="historyfault-self-content"
-            border="0"
-            cellpadding="0"
-            cellspacing="0"
-            width="500"
-            height="500"
+
           >
             <tr>
               <td><h3>故障台账编号</h3></td>
@@ -369,6 +365,31 @@ input {
   right: 110px;
   top: 52px;
 }
+.historyfault-self-all {
+  position: relative;
+
+  margin: 0 auto;
+
+  /*left: 70%;*/
+  line-height: 2;
+
+  background: #ffffff;
+}
+.historyfault-self-content {
+  font-size: 20px;
+  font-weight: 900;
+  border:0;
+  cellpadding:0;
+  cellspacing:0;
+  width:700px;
+  height:700px;
+  background: #ffffff;
+}
+.historyfault-self-content tr td {
+  font-weight: 400;
+  position: relative;
+  text-align: left;
+}
 .home-kind {
   box-sizing: border-box;
   background-color: #ebeef5;
@@ -394,25 +415,6 @@ input {
         width: 40px;
         background-color: #0984e3;
       }
-    }
-    .historyfault-self-all {
-      width: 500px;
-      height: 500px;
-      margin: 0 auto;
-      top: 290px;
-      left: 70%;
-      line-height: 2;
-      text-align: center;
-      background: #ffffff;
-    }
-    .historyfault-self-content {
-      font-size: 50px;
-      font-weight: 900;
-      background: #ffffff;
-    }
-    .historyfault-self-content tr td {
-      font-weight: 900;
-      position: absolute;
     }
 
     .dropdown {
