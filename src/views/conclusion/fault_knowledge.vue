@@ -85,7 +85,7 @@
     </div>
     <div class="text-output"></div>
     <div class="knowledge-button">
-      <button style="width: 120px; height: 25px">故障诊断报告编制</button>
+      <button style="width: 120px; height: 25px"> <a href="../../../static/index.html" >故障诊断报告编制</a> </button>
     </div>
   </div>
 </template>

@@ -16,10 +16,11 @@ import solutionRoutes from './solution'
 import errorRoutes from './error'
 import functionRoutes from  './function'
 import conclusionRoutes from "./conclusion"
+import KG_viewRoutes from "./KG_view";
 
 Vue.use(Router)
 
-const children = [...aboutRoutes, ...customerRoutes, ...homeRoutes, ...productRoutes, ...solutionRoutes,...functionRoutes,...conclusionRoutes]
+const children = [...aboutRoutes, ...customerRoutes, ...homeRoutes, ...productRoutes, ...solutionRoutes,...functionRoutes,...conclusionRoutes,...KG_viewRoutes]
 
 const router = new Router({
   mode: 'history',
